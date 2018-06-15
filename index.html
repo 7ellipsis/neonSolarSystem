@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Solar System</title>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   
+</head>
+<style>
+    ::-webkit-scrollbar
+    {
+        display: none;
+    }
+ul.solarsystem {
+    position: relative;
+    max-height: 640px;
+    list-style: none;
+    top:-30px;
+   left: 10%;
+   
+    
+}
+ul.solarsystem li {
+    text-indent: -9999px;
+    display: inline-block;
+    position: absolute;
+    border: 1px solid #b9c0d6;
+/*    opacity: 0.7;*/
+}
+ul.solarsystem li span {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 5px;
+    border-radius: 50px;
+}
+
+
+
+
+ul.solarsystem li.sun {
+    width: 49px;
+    height: 49px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 120px;
+    background: #fc3;
+    top: 295px;
+    left: 455px;
+    border: none;
+    -webkit-box-shadow: 0 0 50px #c90;
+    -moz-box-shadow: 0 0 50px #c90;
+    box-shadow: 0 0 50px #c90;
+    /* z-index: 100; */
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg, #ffe600, #ff4800, #ffe600);
+background-size: 200% 200%;
+   
+}
+
+ul.solarsystem li.sun span::before {
+    content: '';
+    position: absolute;
+    top: -0.65px;
+    left:-0.65px;
+    background: linear-gradient(45deg, #ffe600, #ff4800, #ffe600);
+    background-size:200%;
+    width: calc(450% + 6px);
+    height: calc(450% + 6px); 
+    border-radius: 400px;
+    z-index: -101;
+    animation: animate 5s radial infinite;
+    filter: blur(2px);
+     
+    
+}
+
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0 0;
+    }
+    50%
+    {
+        background-position: 300% 0;
+    }
+    100%
+    {
+        background-position: 0 0;
+    }
+}
+
+
+ul.solarsystem li.mercury {
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 52px;
+    -moz-border-radius: 52px;
+    border-radius: 52px;
+    top: 280px;
+    left: 440px;
+    z-index: 99;
+}
+ul.solarsystem li.mercury span {
+    background: #b6bac5;
+    top: 8px;
+    left: 8px;
+    box-shadow: 0 0 50px #2b1104;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg,#818181, #2b1104, #e4e3dc);
+background-size: 200% 200%;
+
+}
+ul.solarsystem li.venus {
+    width: 130px;
+    height: 130px;
+    -webkit-border-radius: 82px;
+    -moz-border-radius: 82px;
+    border-radius: 82px;
+    top: 255px;
+    left: 415px;
+    z-index: 98;
+   
+}
+ul.solarsystem li.venus span {
+    background: #bf8639;
+    top: 108px;
+    left: 15px;
+    height: 14px;
+    width:14px;
+    box-shadow: 0 0 50px #bf8639;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg,#818181,#772d27,#111);
+background-size: 200% 200%;
+}
+ul.solarsystem li.earth {
+    width: 190px;
+    height: 190px;
+    -webkit-border-radius: 112px;
+    -moz-border-radius: 112px;
+    border-radius: 112px;
+    top: 223px;
+    left: 385px;
+    z-index: 97;
+    
+}
+ul.solarsystem li.earth span {
+    
+    top: 33px;
+    left: 5px;
+    height: 20px;
+    width:20px;
+    box-shadow: 0 0 50px #0012a7;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg, #0012a7, #a100d0, #00e6ff);
+background-size: 200% 200%;
+}
+ul.solarsystem li.earth span.moon {
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #ccc;
+    top: 19px;
+    left: 19px;
+}
+ul.solarsystem li.mars {
+    width: 235px;
+    height: 235px;
+    -webkit-border-radius: 142px;
+    -moz-border-radius: 142px;
+    border-radius: 142px;
+    top: 200px;
+    left: 362px;
+    z-index: 96;
+
+
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 84%}
+    50%{background-position:100% 17%}
+    100%{background-position:0% 84%}
+}
+ul.solarsystem li.mars span {
+    background: #aa4200;
+    top: 10px;
+    left: 175px;
+    height: 16px;
+    width:16px;
+    box-shadow: 0 0 50px #5c0409;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg, #f70606, #5c0409, #b10505);
+background-size: 200% 200%;
+}
+ul.solarsystem li.asteroids_meteorids {
+    top: 150px;
+    left: 315px;
+    z-index: 1;
+    background: url(http://neography.com/experiment/circles/solarsystem/asteroids_meteorids.png) no-repeat 0 0;
+    width: 330px;
+    height: 330px;
+    -webkit-border-radius: 965px;
+    -moz-border-radius: 965px;
+    border-radius: 995px;
+    border: none;
+}
+ul.solarsystem li.jupiter {
+    width: 340px;
+    height: 340px;
+    -webkit-border-radius: 172px;
+    -moz-border-radius: 172px;
+    border-radius: 172px;
+    top: 150px;
+    left: 310px;
+    z-index: 95;
+}
+ul.solarsystem li.jupiter span {
+    background: #e0ae6f;
+    top: 42px;
+    left: 24px;
+    height: 34px;
+    width:34px;
+    box-shadow: 0 0 50px #e0ae6f;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg, #ebf3f6, #e3dccb, #c99039,#a59186,#d8ca9d);
+background-size: 200% 200%;
+}
+ul.solarsystem li.saturn {
+    width: 400px;
+    height: 400px;
+    -webkit-border-radius: 202px;
+    -moz-border-radius: 202px;
+    border-radius: 202px;
+    top: 120px;
+    left: 280px;
+    z-index: 94;
+}
+ul.solarsystem li.saturn span {
+    background: #dfd3a9;
+    top: 24px;
+    left: 298px;
+    height: 25px;
+    width:25px;
+    box-shadow: 0 0 50px #dfd3a9;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg, #ceb8b8, #ead6b8, #b68487,#bfbdaf,	#403d49);
+background-size: 200% 200%;
+}
+ul.solarsystem li.saturn span.ring {
+    width: 15px;
+    height: 3px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: none;
+    border: 2px solid #5a4e34;
+    left: 5.9px;
+    top: 10px;
+    -webkit-transform: skewY(50deg);
+    -moz-transform: skewY(50deg);
+    -o-transform: skewY(50deg);
+    transform: skewY(70deg);
+}
+ul.solarsystem li.uranus {
+    width: 460px;
+    height: 460px;
+    -webkit-border-radius: 232px;
+    -moz-border-radius: 232px;
+    border-radius: 232px;
+    top: 90px;
+    left: 250px;
+    z-index: 93;
+    
+}
+ul.solarsystem li.uranus span {
+    background: #064f7c;
+    top: 4px;
+    left: 300px;
+    height: 22px;
+    width:22px;
+    box-shadow: 0 0 50px #064f7c;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg, #0012a7, #6b0042);
+background-size: 200% 200%;
+}
+ul.solarsystem li.neptune {
+    width: 520px;
+    height: 520px;
+    -webkit-border-radius: 262px;
+    -moz-border-radius: 262px;
+    border-radius: 262px;
+    top: 60px;
+    left: 220px;
+    z-index: 92;
+}
+ul.solarsystem li.neptune span {
+    background: #35215a;
+    top: -5px;
+    left: 200px;
+    height:20px;
+    width:20px;
+    box-shadow: 0 0 50px #35215a;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg, #0012a7, #3d0696, #1e0252);
+background-size: 200% 200%;
+}
+ul.solarsystem li.pluto {
+    width: 580px;
+    height: 580px;
+    -webkit-border-radius: 292px;
+    -moz-border-radius: 292px;
+    border-radius: 292px;
+    top: 30px;
+    left: 190px;
+    z-index: 91;
+}
+ul.solarsystem li.pluto span {
+    background: #7c6a5c;
+    top: 75px;
+    left: 79px;
+    height: 14px;
+    width:14px;
+    box-shadow: 0 0 50px #7c6a5c;
+    animation: AnimationName 10s ease infinite;
+    background: linear-gradient(45deg, #7c6a5c, #e47119, #3a3029);
+background-size: 200% 200%;
+}
+
+
+
+ul.solarsystem li {
+    
+    -webkit-animation:orbit linear infinite;
+    
+    
+}
+ul.solarsystem li.earth span {
+    -webkit-animation:moon linear infinite;
+    
+    
+}
+ul.solarsystem li.venus{ -webkit-animation:orbit1 linear infinite;}
+ul.solarsystem li.mercury {-webkit-animation-duration:5s; -moz-animation-duration:5s;}
+ul.solarsystem li.venus {-webkit-animation-duration:8s; -moz-animation-duration:8s;}
+ul.solarsystem li.earth {-webkit-animation-duration:15s; -moz-animation-duration:12s;}
+ul.solarsystem li.earth span {-webkit-animation-duration:2s; -moz-animation-duration:2s;}
+ul.solarsystem li.mars {-webkit-animation-duration:20s; -moz-animation-duration:20s;}
+ul.solarsystem li.asteroids_meteorids {-webkit-animation-duration:50s; -moz-animation-duration:50s;}
+ul.solarsystem li.jupiter {-webkit-animation-duration:30s; -moz-animation-duration:30s;}
+ul.solarsystem li.saturn {-webkit-animation-duration:60s; -moz-animation-duration:60s;}
+ul.solarsystem li.uranus {-webkit-animation-duration:70s; -moz-animation-duration:70s;}
+ul.solarsystem li.neptune {-webkit-animation-duration:100s; -moz-animation-duration:100s;}
+ul.solarsystem li.pluto {-webkit-animation-duration:120s; -moz-animation-duration:120s;}
+
+@-webkit-keyframes orbit { from { -webkit-transform:rotate(0deg) } to { -webkit-transform:rotate(360deg) } }
+@-webkit-keyframes orbit1 { from { -webkit-transform:rotate(360deg) } to { -webkit-transform:rotate(0deg) } }
+@-webkit-keyframes moon { from { -webkit-transform:rotate(0deg) } to { -webkit-transform:rotate(360deg) } }
+
+@-moz-keyframes orbit { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
+@-moz-keyframes moon { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
+
+ul.solarsystem li
+{
+    -webkit-animation: rotation 2s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+.ss{
+    font-size: 60px;
+
+color: #fff;
+text-shadow: 0 0 5px rgb(255, 115, 0), 0 0 10px #fff, 0 0 20px #ff008c, 0 0 30px #ffee00, 0 0 40px #ffee00, 0 0 55px #ffee00, 0 0 75px #ffee00;
+text-align: center;
+font-family: Monoton;
+}
+.ss1{
+    line-height: 0px;
+    font-size: 80px;
+font-family: Monoton;
+color: #fff;
+text-shadow: 0 0 5px rgb(248, 3, 3), 0 0 10px #fff, 0 0 20px #006eff, 0 0 30px #006eff, 0 0 40px #006eff, 0 0 55px #006eff, 0 0 75px #006eff;
+text-align: center;
+}
+.ss2{
+    line-height: 0px;
+    font-size: 20px;
+font-family: Iceland;
+color: #fff;
+text-shadow: 0 0 5px rgb(250, 247, 247), 0 0 10px #fff, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+text-align: center;
+}
+
+        </style>
+<body style="background-color: #111">
+    <span style="float: right;font-family: 'Pacifico', monospace; color:rgb(167, 4, 139)">
+        <p class="ss">
+            Solar
+          </p>
+          <p class="ss1">
+                System
+              </p>
+              
+                  Designed with <span class="ss2"><3</span> by Ashay Mandwarya
+                  <br>
+                  <a href="https://www.facebook.com/aashay7" target="_blank"><i class="fa fa-facebook-square"></i></a>&nbsp&nbsp&nbsp&nbsp
+                     <a href="https://github.com/7ellipsis" target="_blank"><i class="fa fa-github"></i></a>&nbsp&nbsp&nbsp&nbsp
+                         <a href="https://www.instagram.com/the.fenris/" target="_blank"><i class="fa fa-instagram"></i></a>&nbsp&nbsp&nbsp&nbsp
+                             <a href="https://www.linkedin.com/in/ashay-mandwarya-7094a9a4/" target="_blank"><i class="fa fa-linkedin-square"></i></a>&nbsp&nbsp&nbsp&nbsp
+                                 <a href=""> <i class="fa fa-medium"></i></a>&nbsp&nbsp&nbsp&nbsp
+                                     <a href="https://www.quora.com/profile/Ashay-Mandwarya" target="_blank"><i class="fa fa-quora"></i></a>&nbsp&nbsp&nbsp&nbsp
+                                     <a href="mailto:ashaymurceilago@gmail.com"><i class="fa fa-address-card"></i></a>
+                                        
+              
+</span>
+    <div class="clearfix">
+        
+        <span id="time" style="font-family: 'Fira Mono', monospace; font-size: 10px; color:ivory">ashay</span>
+        <span id="time1" style="font-family: 'Fira Mono', monospace; font-size: 10px; color:ivory"></span>
+            <ul class="solarsystem">
+              <li class="sun"><span></span></li>
+              <li class="mercury"><span>Mercury</span></li>
+              <li class="venus"><span>Venus</span></li>
+              <li class="earth"><span>Earth<span class="moon"> &amp; Moon</span></span></li>
+              <li class="mars"><span>Mars</span></li>
+              <li class="asteroids_meteorids"><span>Asteroids &amp; Meteorids</span></li>
+              <li class="jupiter"><span>Jupiter</span></li>
+              <li class="saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></li>
+              <li class="uranus"><span>Uranus</span></li>
+              <li class="neptune"><span>Neptune</span></li>
+              <li class="pluto"><span>Pluto</span></li>
+            </ul>
+            
+            
+            
+        </div>
+        <script>
+             $(document).ready(function(){
+        a();
+       
+        
+    });
+    var a=function()
+    {
+        var today = new Date("06/15/2018 22:25:50");
+        var now= new Date();
+      
+        var day=Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds()) - Date.UTC(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours() ,today.getMinutes(), today.getSeconds())) /(1000 * 60 * 60 * 24);
+        var print="";
+        print=Math.round((day*86400)/15);
+        var days="";
+        days=Math.round(print*365);
+       $("#time").html("Earth Years:"+ print + "<br>");
+       $("#time1").html("Earth Days:"+ days);
+       setTimeout(function(){ a(); }, 100);
+    }
+            </script>
+</body>
+</html>
